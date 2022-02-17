@@ -1,0 +1,103 @@
+.get-updates{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5.75rem;
+}
+
+.gu-text-container h3{
+    margin-bottom: 0;
+}
+
+.input-container{
+    display: flex;
+    align-items: center;
+}
+
+.floating-label{
+    position: relative;
+    margin-right: 1.5rem;
+}
+
+.floating-label p{
+    position: absolute;
+    margin: 0;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: all 200ms ease-in-out;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.mail-input:focus ~ .label,.mail-input:not(:placeholder-shown) ~ .label{
+    top: 0;
+    font-size: 14px;
+    background-color: white;
+    color: black;
+}
+
+.mail-input{
+    width: 27.5rem;
+    padding: 10px;
+    /* border: 2px solid var(--secondary-color); */
+    border-radius: 10px;
+}
+
+.mail-input:focus{
+    outline: none;
+    border: 2px solid var(--accent-color)
+}
+
+.form-btn{
+    display: inline-block;
+}
+
+@media screen and (max-width: 1200px){
+    .gu-text-container{
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 960px){
+    .get-updates{
+        display: block;
+    }
+
+    .gu-text-container{
+        width: 100%;
+        text-align: center;
+    }
+
+    .input-container{
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 680px){
+
+    .input-container{
+        /* display: block; */
+        /* text-align: center; */
+        flex-direction: column;
+        /* align-items: center;
+        justify-content: center; */
+        margin-top: 1.875rem;
+    }
+
+    .floating-label{
+        margin-right: 0;
+        margin-bottom: 1.25rem;
+    }
+
+}
+
+@media screen and (max-width: 500px){
+    .mail-input{
+        width: 18.125rem;
+    }
+
+    .get-updates{
+        margin-top: 7rem;
+    }
+}

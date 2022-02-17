@@ -1,0 +1,145 @@
+.best-selling{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    height: 100%;
+    margin-top: 5em;
+}
+
+.bsp-text-container h3{
+   margin-bottom: 0;
+}
+
+.bsp-text-container p{
+    margin:1rem 0;
+}
+
+.bsp-carousel{
+    display: flex;
+    align-items: center;
+   
+}
+
+.slider{
+    display: flex;
+    overflow-x: scroll; 
+    transition: all 200ms ease-in-out;
+    /* position: relative; */
+}
+
+.slider::-webkit-scrollbar{
+    /* position: absolute; */
+    margin-top: 1.875rem;
+    height: 3px;
+}
+
+.slider::-webkit-scrollbar-track{
+    position: absolute;
+    bottom: -10%;
+    background-color: var(--secondary-color);
+    /* margin-top: 1.875rem; */
+}
+
+.slider::-webkit-scrollbar-thumb{
+    width: 3px;
+    background-color: var(--accent-color);
+}
+
+.bsp-card-container{
+    height: 20rem;
+}
+
+.bsp-card-container:not(:last-child){
+    margin-right: 30px;
+}
+
+.bsp-img-container{
+    width:16.875rem;
+    height: 12.5rem;
+    background-color: var(--secondary-color);
+   
+    border-radius: 10px;
+}
+
+.bsp-img-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.bsp-product-details{
+    text-align: center;
+}
+
+.product-name{
+    margin: 10px 0;
+}
+
+.price{
+    margin:0 0 30px 0;
+    /* font-weight: 500; */
+    color: black;
+}
+
+.slider-arrow{
+    font-size: 2.188rem;
+    /* border: 1px solid var(--accent-color); */
+    color: var(--accent-color);
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+@media screen and (max-width: 720px){
+    .best-selling{
+        display: block;
+        text-align: center;
+    }
+
+    .bsp-text-container{
+        margin-bottom: 1.7rem;
+    }
+
+    .bsp-card-container{
+        height: 17.25rem;
+    }
+
+    .bsp-img-container{
+        width: 11.25rem;
+        height: 10rem;
+    }
+}
+
+@media screen and (max-width: 450px){
+
+    /* .bsp-text-container{
+        position: relative;
+    } */
+
+    .best-selling{
+        position: relative;
+    }
+    .slider-arrow{   
+        position: absolute;
+        bottom: -60px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0;
+        /* display: inline-block; */
+        /* z-index: -1; */
+    }
+
+    .fa-circle-left{
+       transform: translateX(-48px);
+    }
+
+    .fa-circle-right{
+        transform: translateX(15px);
+    }
+
+    /* .bsp-img-container{
+        width: 8.75rem;
+    } */
+
+    .bsp-card-container:not(:last-child){
+        margin-right: 10px;
+    }
+}

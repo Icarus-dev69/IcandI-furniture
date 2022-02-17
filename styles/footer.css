@@ -1,0 +1,124 @@
+.footer{
+    background-color: var(--secondary-color);
+    margin-top: 5.75rem;
+    padding-top: 1.563rem;
+}
+
+.footer-grid-container{
+    display: grid;
+    grid-template-areas:
+                "a b c d"
+                "a b c e";
+}
+
+.footer-links-container:nth-child(1){
+    grid-area: a;
+}
+
+.footer-links-container:nth-child(2){
+    grid-area: b;
+}
+
+.footer-links-container:nth-child(3){
+    grid-area: c;
+}
+
+.footer-links-container:nth-child(4){
+    grid-area: d;
+    margin-bottom: 2rem;
+}
+
+.footer-links-container:nth-child(5){
+    grid-area: e;
+}
+
+.footer-link-header{
+    color: black;
+    font-weight: 500;
+    margin-bottom: 1.875rem;
+}
+
+.smaller-mb{
+    margin-bottom: 1rem;
+}
+
+
+
+.footer-link{
+    display: block;
+    text-decoration: none;
+    color: var(--body-copy-color);
+    /* display: flex; */
+}
+
+.footer-link:not(:last-child){
+    margin-bottom: 1rem;
+}
+
+.social-media-icons{
+    color: black;
+    font-size: 2.188rem;
+}
+
+.social-media-icons:not(:last-child){
+    margin-right: 1.875rem;
+}
+
+.contact-detail{
+    display: flex;
+    align-items: center;
+}
+
+.contact-detail i{
+    font-size: 2.188rem;
+    margin-right: 1.875rem;
+}
+
+.copyright{
+    text-align: center;
+    margin-top: 3.75rem;
+    margin-bottom: 0;
+    padding-bottom: 1rem;
+
+}
+
+@media screen and (max-width:950px){
+    .footer-grid-container{
+        grid-template-areas: 
+                    "a b c"
+                    "d e e";
+        /* grid-template-columns: 1fr 1fr 1fr; */
+        grid-gap: 3.75rem;
+    }
+
+    /* .footer-links-container:nth-child(4) .footer-link-header,.footer-links-container:nth-child(4) .footer-links{
+        margin-left: 1.875rem;
+    } */
+
+}
+
+@media screen and (max-width:700px){
+    .footer-grid-container{
+        grid-template-areas: 
+                    "a b"
+                    "c d"
+                    "e e";
+        /* grid-template-columns: 1fr 1fr 1fr; */
+        grid-gap: 2.5rem 0;
+        /* place-items: center; */
+    }
+    .social-media-icons, .contact-detail i{
+        font-size: 1.563rem;
+    }
+
+    .footer-link{
+        font-size: 0.875rem;
+    }
+
+    .copyright{
+        font-size: 0.875rem;
+    }
+}
+
+
+
